@@ -18,14 +18,15 @@ google_pay_qr = qrcode.make(google_pay_url)
 
 # Save the QR code to image file (optional)
 
-phonepe_qr.save('phonepe_qr.png') # type: ignore
-paytm_qr.save('paytm_qr.png') # type: ignore
-google_pay_qr.save('google_pay_qr.png') # type: ignore
+phonepe_qr.save('phonepe_qr.png') 
+paytm_qr.save('paytm_qr.png') 
+google_pay_qr.save('google_pay_qr.png') 
 
 # Display the QR codes (you may need to install PIL/Pillow Library)
 
-phonepe_qr.show()  # type: ignore
-paytm_qr.show() # type: ignore
-google_pay_qr.show() # type: ignore
+phonepe_qr.show()  
+paytm_qr.show() 
+google_pay_qr.show() 
+
 
 
