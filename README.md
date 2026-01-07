@@ -1,0 +1,1 @@
+# Python-mini-Project-QR-code-
