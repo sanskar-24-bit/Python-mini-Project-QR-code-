@@ -1,0 +1,31 @@
+import qrcode
+
+# Taking UPI ID as a input
+upi_id = input("Enter your UPI ID = ")
+
+# Defining the payment URL based on the UPI ID and the payment app.
+# syntax for url : upi://pay?pa = UPI_ID@pn=NAME&am=Amount&cu=CURRENCY&tn= MESSAGE
+
+phonepe_url = f'upi://pay?pa={upi_id}&pn=Recipent%20Name&mc=1234'
+paytm_url = f'upi://pay?pa={upi_id}&pn=Recipent%20Name&mc=1234'
+google_pay_url = f'upi://pay?pa={upi_id}&pn=Recipent%20Name&mc=1234'
+
+# Create QR codes for each payment apps
+
+phonepe_qr = qrcode.make(phonepe_url)
+paytm_qr = qrcode.make(paytm_url)
+google_pay_qr = qrcode.make(google_pay_url)
+
+# Save the QR code to image file (optional)
+
+phonepe_qr.save('phonepe_qr.png') # type: ignore
+paytm_qr.save('paytm_qr.png') # type: ignore
+google_pay_qr.save('google_pay_qr.png') # type: ignore
+
+# Display the QR codes (you may need to install PIL/Pillow Library)
+
+phonepe_qr.show()  # type: ignore
+paytm_qr.show() # type: ignore
+google_pay_qr.show() # type: ignore
+
+
